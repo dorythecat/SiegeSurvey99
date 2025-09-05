@@ -1,4 +1,5 @@
 const text_ids = [
+    "instructions",
     "title",
     "start",
     "climb_start",
@@ -29,7 +30,7 @@ function nextText() {
 }
 
 function previousText() {
-    if (current_text <= 0) return;
+    if (current_text <= 1) return; // Prevent going back to instructions
     hideText(current_text--);
     showText(current_text);
 }
