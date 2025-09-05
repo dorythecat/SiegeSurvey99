@@ -2,6 +2,22 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #111111;
     text-align: center;
+}
+
+.content {
+    background-color: #eeeeee;
+    color: #111111;
+    padding: 20px;
+    margin: 50px 100px;
+    border-radius: 50px;
+}
+
+h1 {
+    background-color: #dddddd;
+    padding: 10px;
+    border-radius: 20px;
+    color: black;
+    font-size: 50px;
 }
