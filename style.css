@@ -21,3 +21,9 @@ h1 {
     color: black;
     font-size: 50px;
 }
+
+p {
+    font-size: 20px;
+    line-height: 1.6;
+    padding: 20px;
+}
