@@ -27,3 +27,12 @@ p {
     line-height: 1.6;
     padding: 20px;
 }
+
+p#start,
+p#climb_start,
+p#climb_middle,
+p#almost_there,
+h1#the_sign,
+p#aaaaalmost_there {
+    display: none;
+}
