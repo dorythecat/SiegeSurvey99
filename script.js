@@ -15,12 +15,48 @@ for (let i = 0; i < text_ids.length; i++) texts.push(document.getElementById(tex
 
 let current_text = 0;
 
+function fade(element) {
+    var op = 1;  // initial opacity
+    var timer = setInterval(function () {
+        if (op <= 0.1){
+            clearInterval(timer);
+            element.style.display = 'none';
+        }
+        element.style.opacity = op;
+        element.style.filter = 'alpha(opacity=' + op * 100 + ")";
+        op -= op * 0.1;
+    }, 50);
+}
+
+function unfade(element) {
+    var op = 0.1;  // initial opacity
+    element.style.display = 'block';
+    var timer = setInterval(function () {
+        if (op >= 1){
+            clearInterval(timer);
+        }
+        element.style.opacity = op;
+        element.style.filter = 'alpha(opacity=' + op * 100 + ")";
+        op += op * 0.1;
+    }, 10);
+}
+
 function showText(index) {
-    texts[index].style.display = "block";
+    if (index === 0) {
+        // Do not fade instructions
+        texts[index].style.display = 'block';
+        return;
+    }
+    unfade(texts[index]);
 }
 
 function hideText(index) {
-    texts[index].style.display = "none";
+    if (index === 0) {
+        // Do not fade instructions
+        texts[index].style.display = 'none';
+        return;
+    }
+    fade(texts[index]);
 }
 
 function nextText() {
