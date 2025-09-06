@@ -36,6 +36,20 @@ p#climb_start,
 p#climb_middle,
 p#almost_there,
 h1#the_sign,
-p#aaaaalmost_there {
+p#aaaaalmost_there,
+h1#neon_sign {
     display: none;
+}
+
+h1#neon_sign {
+    font-size: 60px;
+    color: deeppink;
+    text-shadow: 0 0 5px lightpink, 0 0 10px lightpink, 0 0 20px lightpink, 0 0 40px lightpink;
+    animation: flicker 2s infinite alternate;
+}
+
+@keyframes flicker {
+    0%, 30%, 100% { opacity: 1; }
+    60% { opacity: 0.7; }
+    80% { opacity: 0.4; }
 }
