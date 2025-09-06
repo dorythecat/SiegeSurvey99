@@ -17,6 +17,7 @@ const texts = [];
 for (let i = 0; i < text_ids.length; i++) texts.push(document.getElementById(text_ids[i]));
 
 let current_text = 0;
+let active_h1 = null;
 
 function showText(index) {
     if (index === 0) {
@@ -26,6 +27,10 @@ function showText(index) {
     }
 
     const element = texts[index];
+    if (element.tagName === 'H1') {
+        if (active_h1) active_h1.style.display = 'none';
+        active_h1 = element;
+    }
 
     // Unfade function
     let op = 0.1;  // initial opacity
@@ -47,6 +52,11 @@ function hideText(index) {
     }
 
     const element = texts[index];
+    if (element.tagName === 'H1') {
+        if (active_h1 === element) return;
+        active_h1.style.display = 'none';
+        active_h1 = element;
+    }
 
     // Fade function
     let op = 1;  // initial opacity
