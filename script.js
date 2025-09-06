@@ -12,7 +12,8 @@ const text_ids = [
     "interior1",
     "interior2",
     "interior3",
-    "soldering"
+    "soldering",
+    "the_end"
 ];
 
 const texts = [];
