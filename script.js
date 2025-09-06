@@ -81,7 +81,7 @@ function hideText(index) {
 }
 
 function nextText() {
-    if (current_text >= texts.length - 1) return;
+    if (current_text >= texts.length - 1) return; // Prevent going past the last text
     hideText(current_text++);
     showText(current_text);
 }
