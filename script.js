@@ -10,7 +10,8 @@ const text_ids = [
     "neon_sign",
     "entrance",
     "interior1",
-    "interior2"
+    "interior2",
+    "interior3"
 ];
 
 const texts = [];
