@@ -8,7 +8,8 @@ const text_ids = [
     "the_sign",
     "aaaaalmost_there",
     "neon_sign",
-    "entrance"
+    "entrance",
+    "interior1"
 ];
 
 const texts = [];

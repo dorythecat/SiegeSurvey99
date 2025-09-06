@@ -38,7 +38,8 @@ p#almost_there,
 h1#the_sign,
 p#aaaaalmost_there,
 h1#neon_sign,
-p#entrance {
+p#entrance,
+p#interior1 {
     display: none;
 }
 
