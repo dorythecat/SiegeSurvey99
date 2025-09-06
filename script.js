@@ -14,7 +14,10 @@ const text_ids = [
 
 const texts = [];
 
-for (let i = 0; i < text_ids.length; i++) texts.push(document.getElementById(text_ids[i]));
+for (let i = 0; i < text_ids.length; i++) {
+    texts.push(document.getElementById(text_ids[i]));
+    texts[i].style.display = "none";
+}
 
 let current_text = 0;
 let active_h1 = null;

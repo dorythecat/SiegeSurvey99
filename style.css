@@ -29,20 +29,6 @@ p {
     padding: 20px;
 }
 
-p#instructions,
-h1#title,
-p#start,
-p#climb_start,
-p#climb_middle,
-p#almost_there,
-h1#the_sign,
-p#aaaaalmost_there,
-h1#neon_sign,
-p#entrance,
-p#interior1 {
-    display: none;
-}
-
 h1#neon_sign {
     font-size: 60px;
     color: deeppink;
