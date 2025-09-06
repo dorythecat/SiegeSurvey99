@@ -19,12 +19,11 @@ const text_ids = [
     "credits"
 ];
 
-const texts = [];
-
-for (let i = 0; i < text_ids.length; i++) {
-    texts.push(document.getElementById(text_ids[i]));
-    texts[i].style.display = "none";
-}
+const texts = text_ids.map((id) => {
+    const element = document.getElementById(id);
+    element.style.display = "none";
+    return element;
+});
 
 let current_text = 0;
 let active_h1 = null;
@@ -95,8 +94,15 @@ function previousText() {
 
 document.addEventListener("pointerdown", nextText);
 document.addEventListener("keydown", function(event) {
-    if (event.key === "ArrowRight") nextText();
-    else if (event.key === "ArrowLeft") previousText();
+    switch (event.key) {
+        case "ArrowRight":
+        case "Enter":
+            nextText();
+            break;
+        case "ArrowLeft":
+            previousText();
+            break;
+    }
 });
 
 // Initialize by showing the first text
